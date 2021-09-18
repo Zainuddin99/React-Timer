@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+h1:first-child{
+  margin: 80px auto;
+  width: 60%;
+  font-size: 9vw;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  border: none;
+}
+
+button{
+  background-color: red;
+  color: white;
+  transition: 0.2s ease-out;
+  border: none;
+  padding: 10px;
+  font-size: 35px;
+  outline: 1px solid black;
+}
+
+.lapse{
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+}
+.reset{
+  background-color: green
+}
+button:active{
+  transform: scale(1.05);
+}
+
+.lapseItem{
+  width:fit-content;
+  padding: 20px 50px;
+  margin: 0;
+  border-radius: 20px;
+  transition: 1s ease-in-out;
+}
+
+.lapseItem-enter{
+  opacity: 0;
+}
+.lapseItem-enter-active{
+  opacity: 1;
+}
+
+.lapseItem:nth-child(even){
+  background-color: yellow;
+}
+.lapseItem:nth-child(odd){
+  background-color: rgb(241, 200, 122);
+}
+.butns{
+  margin-bottom: 30px;
+}
+
+h2{
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.lapseItem > span{
+  text-align: right;
+  color: red;
+  margin-left: 30px;
+  font-size: large;
+}
+.lapseItem > span:hover{
+  color: brown;
+}
+
+@media only screen and (max-width:500px) {
+  h1:first-child{
+  margin: 40px auto;
+  width: 85%;
+  font-size: 13vw;
+}
+button{
+  padding: 10px;
+  font-size: 5vw;
+}
+.lapseItem{
+  font-size: large;
+  padding: 10px 10%;
+}
+}
+
+h5{
+  font-size: large;
+  background-color: rgb(78, 78, 189);
+  color: white;
+  padding: 15px;
+  width: fit-content;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  margin: auto;
+  border-radius: 20px;
+  animation: modalAnime 0.05s;
+}
+@keyframes modalAnime {
+  from{bottom: 0;}to{bottom: 20px;}
+}
